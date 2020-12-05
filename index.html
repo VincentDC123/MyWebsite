@@ -9,15 +9,15 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><strong>Home</strong></li>
-                <li><a href="contact.html"><strong>Contact</strong></a></li>
-                <li><a href="project.html"><strong>Projects</strong></a></li>
+            <ul class="nav-ul">
+                <li class="nav-li"><strong>Home</strong></li>
+                <li class="nav-li"><a href="contact.html"><strong>Contact</strong></a></li>
+                <li class="nav-li"><a href="project.html"><strong>Projects</strong></a></li>
             </ul>
         </nav>
         <h1>My Website</h1>
     </header>
-    <section>
+    <section class="section about-me">
         <h2>About me</h2>
         My name is Vincent Paul Dela Cruz. <br />
         I am a <strong>computer science major</strong> 
@@ -25,18 +25,25 @@
         This website is used to learn and test html and css.
         <br />
         I am also trying to incorporate js in this website as well.
-    </section>
+    </section class="section unknown">
 
-    <section>
-        <div>a</div>
-        <div>b</div>
-        <div>c</div>
+    <section class="section unknown">
+        
     </section>
     
     <footer>
-        <button class="button button1">Click here to learn more!</button>
+        <button class="button button1"><a href="contact.html">Click here to learn more!</a></button>
         <button class="button button2">
-            Test
+            <script>
+                var links = ["contact.html","index.html","project.html"];
+                function random() {
+                    var i = parseInt(Math.random() * links.length);
+                    location.href = links[i];
+                }
+            </script>
+            <a href="#" onclick="random();">
+                Mystery Button
+            </a>
         </button> 
     </footer>
     
