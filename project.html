@@ -9,26 +9,39 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html"><strong>Home</strong></a></li>
-                <li><a href="contact.html"><strong>Contact</strong></a></li>
-                <li><strong>Projects</strong></li>
+            <ul class="nav-ul">
+                <li class="nav-li"><a href="index.html"><strong>Home</strong></a></li>
+                <li class="nav-li"><a href="contact.html"><strong>Contact</strong></a></li>
+                <li class="nav-li"><strong>Projects</strong></li>
             </ul>
         </nav>
         <h1>Projects</h1>
     </header>
-    <section>
+    <section class="section ongoing">
         <h2>Ongoing Projects</h2>
+        <ul class="ongoing-project">
+            <li class="ongoing-project-list">Website</li>
+            <li class="ongoing-project-list">Warehouse Management System</li>
+        </ul>
     </section>
 
-    <section>
+    <section class="section complete">
         <h2>Completed Projects</h2>
     </section>
     
     <footer>
-        <button class="button button1">Click here to learn more!</button>
+        <button class="button button1"><a href="contact.html">Click here to learn more!</a></button>
         <button class="button button2">
-            Mystery Button
+            <script>
+                var links = ["contact.html","index.html","project.html"];
+                function random() {
+                    var i = parseInt(Math.random() * links.length);
+                    location.href = links[i];
+                }
+            </script>
+            <a href="#" onclick="random();">
+                Mystery Button
+            </a>
         </button> 
     </footer>
     
